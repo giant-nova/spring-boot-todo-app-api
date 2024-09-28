@@ -6,7 +6,7 @@ FROM openjdk:21-slim
 COPY --from=build target/todoapi-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 8080
 
-ENV DATABASE_URL=jdbc:postgresql://todo_db_f9pw_user:HwaRKAzDusbRjln5tvXFyHLnHo3wTbaV@dpg-crs2jhggph6c738o8gfg-a.oregon-postgres.render.com/todo_db_f9pw
+ENV DATABASE_URL=jdbc:postgresql://todo_db_f9pw_user:HwaRKAzDusbRjln5tvXFyHLnHo3wTbaV@dpg-crs2jhggph6c738o8gfg-a:5432/todo_db_f9pw
 ENV DB_USER=todo_db_f9pw_user
 ENV DB_PASSWORD=HwaRKAzDusbRjln5tvXFyHLnHo3wTbaV
 
