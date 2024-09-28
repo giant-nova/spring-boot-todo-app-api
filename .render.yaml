@@ -2,7 +2,9 @@ services:
   - type: web
     name: spring-boot-todo-app-api
     env: static
-    buildCommand: ./mvnw clean install
+    buildCommand: sudo apt-get update
+      sudo apt-get install openjdk-21-jdk -y
+      ./mvnw clean install
     startCommand: java -jar target/todoapi-0.0.1-SNAPSHOT.jar
     envVars:
       - key: JAVA_HOME
