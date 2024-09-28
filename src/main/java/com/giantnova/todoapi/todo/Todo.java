@@ -1,37 +1,45 @@
+// File: src/main/java/com/example/todo/model/Todo.java
 package com.giantnova.todoapi.todo;
 
-import java.time.LocalDate;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
+@Entity
 public class Todo {
 
-    private int id;
-    private String username;
-    private String description;
-    private LocalDate targetDate;
-    private boolean done;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    public Todo(int id, String username, String description, LocalDate targetDate, boolean done) {
-        this.id = id;
-        this.username = username;
-        this.description = description;
-        this.targetDate = targetDate;
-        this.done = done;
+    private String title;
+    private String description;
+    private boolean completed;
+
+    public Todo() {
     }
 
-    public int getId() {
+    public Todo(String title, String description, boolean completed) {
+        this.title = title;
+        this.description = description;
+        this.completed = completed;
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getTitle() {
+        return title;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getDescription() {
@@ -42,30 +50,11 @@ public class Todo {
         this.description = description;
     }
 
-    public LocalDate getTargetDate() {
-        return targetDate;
+    public boolean isCompleted() {
+        return completed;
     }
 
-    public void setTargetDate(LocalDate targetDate) {
-        this.targetDate = targetDate;
-    }
-
-    public boolean isDone() {
-        return done;
-    }
-
-    public void setDone(boolean done) {
-        this.done = done;
-    }
-
-    @Override
-    public String toString() {
-        return "Todo{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", description='" + description + '\'' +
-                ", targetDate=" + targetDate +
-                ", done=" + done +
-                '}';
+    public void setCompleted(boolean completed) {
+        this.completed = completed;
     }
 }
