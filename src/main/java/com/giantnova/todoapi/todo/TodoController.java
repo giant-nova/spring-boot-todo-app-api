@@ -9,8 +9,8 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/todos")/*
-@CrossOrigin(origins = "http://localhost:3000") // Allow requests from React app running on localhost:3000*/
+@RequestMapping("/api/todos")
+@CrossOrigin(origins = "http://localhost:3000") // Allow requests from React app running on localhost:3000
 public class TodoController {
 
     @Autowired

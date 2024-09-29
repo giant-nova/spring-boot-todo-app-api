@@ -1,4 +1,3 @@
-// File: src/main/java/com/example/todo/service/TodoService.java
 package com.giantnova.todoapi.todo;
 
 import org.springframework.beans.factory.annotation.Autowired;
