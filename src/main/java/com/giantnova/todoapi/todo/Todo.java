@@ -1,4 +1,3 @@
-// File: src/main/java/com/example/todo/model/Todo.java
 package com.giantnova.todoapi.todo;
 
 import jakarta.persistence.Entity;

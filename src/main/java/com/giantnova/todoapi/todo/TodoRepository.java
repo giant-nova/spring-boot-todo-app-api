@@ -5,4 +5,3 @@ import org.springframework.stereotype.Repository;
 
 public interface TodoRepository extends JpaRepository<Todo, Long> {
 }
-

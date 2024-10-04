@@ -1,4 +1,3 @@
-// File: src/main/java/com/example/todo/controller/TodoController.java
 package com.giantnova.todoapi.todo;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,13 +28,8 @@ public class TodoController {
     }
 
     @PostMapping
-    public ResponseEntity<Todo> createTodo(@RequestBody Todo todo) {
-        try {
-            Todo createdTodo = todoService.createTodo(todo);
-            return ResponseEntity.ok(createdTodo);
-        } catch (Exception e) {
-            return ResponseEntity.status(500).body(null); // Return 500 Internal Server Error if something goes wrong
-        }
+    public Todo createTodo(@RequestBody Todo todo) {
+        return todoService.createTodo(todo);
     }
 
     @PutMapping("/{id}")
