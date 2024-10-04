@@ -22,7 +22,7 @@ services:
       SPRING_DATASOURCE_USERNAME: todouser
       SPRING_DATASOURCE_PASSWORD: todopassword
     ports:
-      - "8080:8080"
+      - "8090:8090"
     networks:
       - todo-network
     depends_on:
